@@ -1,0 +1,41 @@
+body {
+	background: #222;
+	font-family: monospace;
+}
+
+.titulo{
+	color: #fff;
+	text-align: center;
+}
+
+.contenedor {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.galeria__img{
+	width: 300px;
+	height: 400px;
+	margin-bottom: 30px;
+	object-fit: cover;
+	filter:brightness(70%);
+	cursor: pointer;
+	animation: escalar 1.5s infinite alternate;
+}
+
+@keyframes escalar{
+	to{
+		transform: scale(1);
+	}
+	from{
+		transform: scale(1.02);
+	}
+}
+
+.galeria__img:hover {
+	filter: brightness(100%);
+}
